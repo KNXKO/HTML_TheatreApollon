@@ -1,0 +1,1141 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(https://allfont.net/allfont.css?fonts=book-antiqua);
+
+* {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Calibri, book-antiqua, 'Open Sans', sans-serif;
+}
+
+:root {
+    --main-color: #ECBB4C;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6d6d6d;
+}
+
+/* Pozadie oznaceneho textu */
+::-moz-selection {
+    color: #000000;
+    background: var(--main-color);
+}
+
+::selection {
+    color: #000000;
+    background: var(--main-color);
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1835px) {
+    .newsletter {
+        padding: 70px 200px !important;
+    }
+}
+
+@media only screen and (max-width: 1618px) {
+    .listky-box {
+        padding: 70px 250px !important;
+    }
+
+    .program-box-sm {
+        max-width: 400px !important;
+    }
+
+    .program-box {
+        min-width: 400px !important;
+    }
+
+    .program-box img {
+        height: 230px !important;
+    }
+
+    .herci-box {
+        margin: 0px 20px !important;
+        height: 45% !important;
+        max-height: 300px !important;
+    }
+
+    footer {
+        padding: 30px 100px !important;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .priprav-box {
+        width: 60% !important;
+    }
+
+    .priprav hr {
+        width: 60% !important;
+    }
+
+    table {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 1320px) {
+    .program-box {
+        min-width: 350px !important;
+        margin: 10px !important;
+    }
+
+    .program-box-sm {
+        max-width: 350px !important;
+    }
+
+    .program-box {
+        min-width: 380px !important;
+    }
+
+    .program-box img {
+        height: 210px !important;
+    }
+
+    .newsletter {
+        padding: 70px 100px !important;
+    }
+
+    .eshop-box img {
+        width: 230px !important;
+    }
+
+    .herci-box {
+        width: 16% !important;
+        height: 230px !important;
+    }
+}
+
+/* ANIMACIA PRI NACITANI STRANKY*/
+
+#wrapper,
+#vstupenky,
+#kontakt,
+#eshop,
+#partneri,
+#fotogaleria,
+#predstavenie,
+#login {
+    width: 100%;
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.main-image img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* NAVIGACIA */
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10%;
+    background-color: rgba(0, 0, 0, 0.938);
+    position: fixed;
+    z-index: 99;
+}
+
+.nav2 {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10%;
+    background-color: rgba(0, 0, 0, 0.938);
+    position: relative;
+    z-index: 99;
+}
+
+.nav-links li,
+.nav-links a,
+.nav-icons a {
+    text-decoration: none;
+    padding: 0px 15px;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 1.1em;
+    color: #fff;
+    opacity: 0.6;
+    transition: .5s;
+}
+
+.nav-links a:hover,
+li:hover,
+.nav-logo:hover {
+    opacity: 1;
+    transition: .5s;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+    transition: .5s;
+}
+
+.logo {
+    width: 80px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.nav-icons i {
+    color: var(--main-color);
+    opacity: 0.6;
+    transition: .5s;
+}
+
+.nav-icons i:hover {
+    opacity: 1;
+    transition: .5s;
+}
+
+/* DOMOV */
+.home-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    resize: vertical;
+    height: 100vh;
+    width: 100%;
+}
+
+.home-box h2 {
+    font-family: book-antiqua;
+    color: var(--main-color);
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+.home-box h1 {
+    text-align: center;
+    color: white;
+    font-family: book-antiqua;
+    font-size: 8em;
+    font-weight: 500;
+}
+
+.home-box h3 {
+    color: white;
+    font-family: Calibri;
+    font-size: 2.4em;
+    font-weight: 400;
+}
+
+.home-buttons-box {
+    min-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.button-gold {
+    width: 160px;
+    height: 55px;
+    background-color: var(--main-color);
+    border: 4px solid var(--main-color);
+    color: #000;
+    font-weight: bolder;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px;
+    transition: .5s;
+}
+
+.button-white {
+    width: 160px;
+    height: 55px;
+    padding: 13px;
+    border: 4px solid #fff;
+    color: black;
+    font-weight: bolder;
+    font-size: 1em;
+    outline: none;
+    background-color: #ffff;
+    text-decoration: none;
+    text-align: center;
+    transition: .5s;
+}
+
+.button-white:hover,
+.button-white:active,
+.button-gold:hover,
+.button-gold:active {
+    opacity: .7;
+    transition: .5s;
+}
+
+/* SEKCIA - ZISKAJTE LISTKY */
+
+.listky-box {
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    padding: 55px 400px;
+    justify-content: center;
+    align-items: baseline;
+    align-content: center;
+}
+
+.listky-box h1 {
+    font-family: book-antiqua;
+    font-size: 2.5em;
+    font-weight: bolder;
+    font-style: italic;
+    color: #fff;
+    display: inline;
+}
+
+.listky-box h2 {
+    font-family: Calibri;
+    font-size: 1.4em;
+    color: #818181;
+    font-weight: 400;
+}
+
+.listky-box .button-gold {
+    float: right;
+    margin-top: 10px;
+    margin-right: 0px;
+}
+
+.h1-black {
+    margin-top: 70px;
+    font-family: book-antiqua;
+    font-size: 3.5em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.h1-white {
+    padding-top: 70px;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-family: book-antiqua;
+    font-size: 3.5em;
+    font-weight: bolder;
+    color: #fff;
+}
+
+/* SEKCIA - O NÁS */
+
+.info {
+    width: 100%;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info p {
+    margin-top: 20px;
+    width: 850px;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.info img {
+    height: 300px;
+    object-fit: fill;
+}
+
+/* SEKCIA - PROGRAM */
+
+.program {
+    width: 100%;
+    height: 750px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.program-box {
+    width: 20%;
+    margin: 20px;
+    min-width: 500px;
+}
+
+.program-box img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.program-box-sm:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.699);
+    background-image: url("../img/icon-more.png");
+    object-position: center;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 50px;
+}
+
+.program-box h1 {
+    font-family: Calibri;
+    font-size: 2em;
+    font-weight: 500;
+    color: #fff;
+}
+
+.program-box h2 {
+    font-family: Calibri;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.program-box h3 {
+    font-family: Calibri;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #ABABAB;
+}
+
+.program-box-sm img {
+    width: 500px;
+    height: 280px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+.program-box-sm {
+    box-sizing: content-box;
+    margin: 10px;
+    width: 500px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    border: thin solid var(--main-color);
+
+}
+
+/* SEKCIA - CITÁT */
+
+.citat {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    background: linear-gradient(140deg, rgba(119, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%);
+    animation: gradientBG 6s ease infinite;
+    background-size: 200% 200%;
+}
+
+.citat img {
+    height: 60vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.citat h1 {
+    font-family: book-antiqua;
+    font-size: 4em;
+    font-style: italic;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+}
+
+.citat h2 {
+    margin-top: 20px;
+    font-family: book-antiqua;
+    font-size: 2.3em;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+}
+
+.citat h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* SEKCIA - HERCI */
+
+.herci {
+    width: 100%;
+    height: 600px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.herci-box {
+    width: 16%;
+    height: 310px;
+    margin: 0px 30px;
+    max-height: 500px;
+}
+
+.herci-box img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border: thin solid var(--main-color);
+}
+
+/* SEKCIA - PRIPRAVUJEME */
+
+.priprav-table,
+.priprav {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.priprav-table img {
+    width: 250px;
+    height: 150px;
+}
+
+.priprav-table th span {
+    font-size: .5em;
+    color: #333333;
+
+}
+
+.priprav-table th:nth-child(3) {
+    text-align: right;
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+.priprav-table th:nth-child(2) {
+    font-family: book-antiqua;
+    font-size: 4em;
+    font-weight: bolder;
+    font-style: italic;
+    color: #6d6d6d;
+}
+
+.zobrazit-viac,
+.zobrazit-viac a {
+    text-align: center;
+    font-family: book-antiqua;
+    font-size: 1.2em;
+    font-weight: normal;
+    font-style: italic;
+    color: var(--main-color);
+    text-decoration: none;
+    width: 100%;
+    transition: .5s;
+}
+
+.zobrazit-viac a:hover {
+    opacity: .5;
+    transition: .5s;
+}
+
+/* SEKCIA - NEWSLETTER */
+
+.newsletter {
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    padding: 70px 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsletter h1 {
+    text-align: left;
+    font-family: book-antiqua;
+    font-size: 1.8em;
+    font-weight: bolder;
+    font-style: italic;
+    color: #fff;
+}
+
+.newsletter h2 {
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #818181;
+}
+
+.newsletter input {
+    width: 250px;
+    height: 55px;
+    padding: 17px;
+    border: 0;
+    color: #fff;
+    background-color: #2D2D2D;
+    font-size: 1em;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.newsletter textarea:focus,
+input:focus {
+    outline: none;
+
+}
+
+.newsletter div .button-gold {
+    margin-top: 10px;
+    margin-right: 0px;
+    float: right;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 420px;
+    background-color: #000;
+    padding: 30px 200px;
+    border-top: .1px solid var(--main-color);
+
+}
+
+footer h3 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+    color: #979797;
+    margin-bottom: 50px;
+}
+
+footer a,
+footer a:link {
+    transition: .5s;
+    color: #979797;
+    text-decoration: none;
+}
+
+footer a:hover,
+.mapa:hover {
+    opacity: .5;
+    transition: .5s;
+}
+
+footer div h4 {
+    font-family: book-antiqua;
+    font-size: 2em;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+footer p {
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #818181;
+}
+
+footer .box div:nth-child(2) {
+    opacity: 0.9;
+}
+
+.box hr {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-color: #707070;
+}
+
+.box i {
+    color: var(--main-color);
+    width: 30px;
+    opacity: .7;
+}
+
+footer img {
+    float: left;
+    margin-right: 30px;
+}
+
+footer .box {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .box div {
+    display: flex;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    min-width: 200px;
+}
+
+footer h6 {
+    text-align: center;
+    color: var(--main-color);
+    font-family: book-antiqua;
+    font-size: 1em;
+    font-weight: 500;
+    padding-top: 40px;
+}
+
+/* PODSTRANKA - KONTAKT */
+
+#kontakt {
+    background: #000;
+    height: 150%;
+}
+
+.mapa img {
+    width: 100%;
+    object-fit: fill;
+}
+
+.mapa {
+    width: 800px;
+    transition: .5s;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    height: 60%;
+    padding: 5% 8%;
+}
+
+.left input,
+textarea {
+    width: 300px;
+    height: 50px;
+    border: 1.5px solid var(--main-color);
+    color: #000;
+    background-color: #ffffff;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-decoration: none;
+    text-align: left;
+    transition: .5s;
+    padding: 5px;
+    margin-bottom: 35px;
+}
+
+.left input:focus,
+textarea:focus {
+    background-color: #c0c0c0;
+    color: #000;
+    transition: .5s;
+    outline: none;
+}
+
+.left textarea {
+    width: 400px;
+    height: 150px;
+}
+
+.left h1 {
+    margin-top: 90px;
+    margin-bottom: 35px;
+    font-family: book-antiqua;
+    font-size: 3em;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.left .button-gold {
+    float: left;
+    margin-left: 240px;
+}
+
+/* PODSTRANKA - VSTUPENKY */
+
+.vstupenky-table,
+.vstupenky-table tr,
+.vstupenky-table th {
+    border-collapse: collapse;
+}
+
+.vstupenky-table {
+    margin: 0 auto;
+    width: 1400px;
+    height: 500px;
+    border: 2px solid var(--main-color);
+    font-size: 1.5em;
+    -webkit-box-shadow: 5px 5px 27px -8px rgba(0, 0, 0, 0.6);
+    box-shadow: 5px 5px 27px -8px rgba(0, 0, 0, 0.6);
+}
+
+.vstupenky-table th {
+    font-weight: 300;
+    font-family: Calibri;
+    border-left: 1px solid var(--main-color);
+}
+
+.vstupenky-table tr:nth-child(1) th {
+    background-color: #000;
+    color: #fff;
+    font-weight: 500;
+}
+
+.vstupenky-table tr {
+    border: 1px solid #6d6d6d;
+}
+
+.vstupenky-box {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.vstupenky-box-sm {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow {
+    width: 60px;
+    transition: .5s;
+}
+
+.left .arrow {
+    transition: .5s;
+}
+
+.arrow:hover,
+.arrow2:hover {
+    opacity: .3;
+    transition: .5s;
+}
+
+/* PODSTRANKA - ESHOP */
+
+.eshop-box {
+    padding: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.eshop-box-sm {
+    width: 45%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.eshop-box-sm div:nth-child(1) {
+    border-right: 0.2px solid #cacaca;
+    margin-right: 20px;
+}
+
+.eshop-box-xs {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.eshop-box-sm img {
+    margin: 20px;
+    width: 300px;
+}
+
+.eshop-box-xs h3 {
+    text-transform: uppercase;
+    color: #a1a1a1;
+}
+
+.eshop-box-xs h4 {
+    font-size: 1.8em;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.eshop-box-xs select {
+    margin: 10px 0px;
+    font-size: 1em;
+    border-radius: 0px;
+    padding: 10px;
+    width: 250px;
+    height: 55px;
+    border-color: #dadada;
+    outline: none;
+    font-weight: 800;
+    color: #686868;
+}
+
+.eshop-input {
+    margin: 10px 30px 30px 0px;
+    width: 55px;
+    height: 55px;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 800;
+    color: #686868;
+    border: 1px solid #dadada;
+}
+
+/* PODSTRANKA - PARTNERI */
+
+.partneri-box-sm {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* PODSTRANKA - FOTOGALERIA */
+
+#fotogaleria {
+    background: black;
+}
+
+.gallery-box {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-box img,
+.gallery-box video,
+audio {
+    height: 250px;
+    width: 350px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+.img-box {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+.img-box:hover img,
+.program-box-sm:hover img {
+    transform: scale(1.1);
+}
+
+.img-box:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+/* PODSTRANKY - PREDSTAVENIA */
+
+.predstavenie {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.predstavenie-img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.predstavenie-img img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.predstavenie h3 {
+    font-size: 2.5em;
+    font-family: book-antiqua;
+    color: var(--main-color);
+    text-shadow: rgba(0, 0, 0, 0.226) 1px 1px 1px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.predstavenie p {
+    font-size: 1.1em;
+    width: 100%;
+    color: black;
+    font-weight: 300;
+}
+
+.predstavenie .col:nth-child(4) {
+    float: left;
+    width: 60%;
+    margin-right: 80px;
+}
+
+.predstavenie h4 {
+    font-size: 1.4em;
+    font-family: book-antiqua;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.predstavenie h5 {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+.predstavenie hr {
+    border: 0.5px solid #ebebeb;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#login {
+    position: fixed;
+}
+form {
+    width: 100%;
+}
+.login-box-lg {
+    width: 50%;
+    padding: 3% 6%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#login img{
+    float: left;
+    width: 50%;
+    height: 1000px;
+}
+.login-box-sm {
+    width: 300px;
+    margin: 10px;
+}
+
+.login-box-bg {
+    width: 100%;
+    margin: 10px;
+}
+
+.login-box-bg div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #000;
+}
+
+.login-box-sm input {
+    margin: 10px 0px;
+    width: 300px;
+    height: 50px;
+    border: 1.5px solid var(--main-color);
+    color: #000;
+    background-color: #ffffff;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 5px 3px 7px rgba(0, 0, 0, 0.116);
+}
+
+#login input:focus {
+    color: #000;
+    transition: .5s ease-in-out;
+    outline: none;
+    box-shadow: 5px 3px 7px rgba(0, 0, 0, 0.199);
+}
+
+.login-box-bg input {
+    margin: 15px 5px;
+}
+
+.login-box-bg span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.login-box-bg .button-gold {
+    width: 100%;
+    font-size: 1.1em;
+}
+.login-box-lg h1 {
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: book-antiqua;
+    font-size: 3em;
+    font-weight: bolder;
+    color: #000;
+}

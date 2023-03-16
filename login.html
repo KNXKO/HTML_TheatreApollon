@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+    <meta charset="utf-8">
+    <title>Divadlo Apollon | Kontakt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vážení návštevníci divadla, pripravili sme pre Vás pravidelné zasielanie informácií o programe Divadla Apollon, ako aj o ďalších novinkách.">
+    <meta name="keywords" content="Divadlo Apollon, Divadlo, Bratislava, Divadlo Bratislava">
+    <meta name="author" content="Lukáš Lechovič">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+    <link rel="manifest" href="fav/site.webmanifest">
+    <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+    <!-- NAVIGACIA -->
+    <nav class="nav2">
+        <!-- LOGO -->
+        <div class="nav-logo">
+            <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+        </div>
+        <!-- LINKS -->
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html#info">O NÁS</a></li>
+                <li><a href="program.html">PROGRAM</a></li>
+                <li><a href="vstupenky.html">VSTUPENKY</a></li>
+                <li><a href="index.html#pripravujeme">PRIPRAVUJEME</a></li>
+                <li><a href="fotogaleria.html">FOTOGALÉRIA</a></li>
+            </ul>
+        </div>
+        <!-- ICONS -->
+        <div class="nav-icons">
+            <a href="login.html"><i class="fa solid fa-user"></i></a>
+            <a href="eshop.html"><i class="fas fa-gifts"></i></a>
+            <a href="kontakt.html"><i class="fas fa-envelope"></i></a>
+            <a href="doc/dokumentacia.pdf" target="_blank"><i class="fas fa-file"></i></a>
+        </div>
+    </nav>
+    <main id="login">
+        <img src="img/login.jpg" alt="bg-image">
+        <form action="php/form.php" method="POST">
+            <div class="login-box-lg">
+                <h1>Registrácia</h1>
+                <div class="login-box-sm">
+                    <label for="fname">Meno</label><br>
+                    <input type="text" name="fname" placeholder="Andrej" required>
+                </div>
+                <div class="login-box-sm">
+                    <label for="lname">Priezvisko</label><br>
+                    <input type="text" name="lname" placeholder="Danko" required>
+                </div>
+                <div class="login-box-sm">
+                    <label for="birth_date">Dátum narodenia</label><br>
+                    <input type="date" name="birth_date" required>
+                </div>
+                <div class="login-box-sm">
+                    <label for="email">Email</label><br>
+                    <input type="text" name="email" placeholder="andrejdanko@gmail.com" required>
+                </div>
+                <div class="login-box-sm">
+                    <label for="phone">Telefónne číslo</label><br>
+                    <input type="text" name="phone" placeholder="0915 532 849" required>
+                </div>
+                <div class="login-box-sm">
+                    <label for="country">Štát</label><br>
+                    <input type="text" name="country" placeholder="Slovakia" required>
+                </div>
+                <div class="login-box-sm">
+                    <label for="city">Mesto</label><br>
+                    <input type="text" name="city" placeholder="Bratislava" required>
+                </div>
+                <div class="login-box-sm">
+                    <label for="zipcode">PSČ</label><br>
+                    <input type="text" name="zipcode" placeholder="900 82" required>
+                </div>
+                <div class="login-box-sm">
+                    <label for="password">Heslo</label><br>
+                    <input type="password" required>
+                </div>
+                <div class="login-box-sm">
+                    <label for="password">Potvrdenie hesla</label><br>
+                    <input type="password" name="password" required>
+                </div>
+                <div class="login-box-bg">
+                    <label for="sex">Pohlavie</label><br>
+                    <div>
+                        <div>
+                            <input name="sex" value="muz" type="radio">
+                            <span>Muž</span>
+                        </div>
+                        <div>
+                            <input name="sex" value="zena" type="radio">
+                            <span>Žena</span>
+                        </div>
+                        <div>
+                            <input name="sex" value="other" type="radio">
+                            <span>Iné</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-box-bg">
+                    <button type="hidden" name="submited" class="button-gold" value="Message sent successfully"> </button>
+                    <button type="submit" name="submit" class="button-gold">Odoslať</button>
+                </div>
+            </div>
+        </form>
+        <?php
+        if ($nameError =="Name is mandatory"){
+        echo "Error";
+        }else{
+        echo $submited; 
+        }
+        ?>
+    </main>
+</body>
+
+</html>
